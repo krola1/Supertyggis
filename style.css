@@ -1,0 +1,99 @@
+/* først fjerne margins og padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* "bakteppe setter bakrgunnsbilde  */
+#bakteppe {
+  width: 100%;
+  /* LÆRING! Her kødder bakgrunnen med width når jeg justerte height. må sjekkes opp i  */
+  height: 200vh;
+  background-image: url(bilder/bakgrunn_V2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* estetisk del for den lille fliken som indikerer dropdown menyen*/
+#knapp {
+  position: fixed;
+  left: 20%;
+  height: 1%;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.449);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+/* strukturen rundt menyen */
+#topBanner {
+  display: none; /* gjør menyen usynlig før den aktiveres av musen */
+  /* plassering */
+  position: fixed;
+  left: 20%;
+  width: 60%;
+  height: 15%;
+  /* effekter */
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+/* boksene/knappene inne i menyen */
+.boks_topBanner {
+  /* plassering */
+  position: absolute;
+  top: 10%;
+  height: 80%;
+  /* effekter */
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  width: calc(80% / 3);
+
+  /* tekstbehandling. 
+overflow -hidden for å holde
+informasjon innenfor boksene 
+text decoration none for å fjerne underlinje i linker.
+link "<a> tag overkjørte det hvis det ble definert for <p> under*/
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* mer tekstbehandlig - denne gangen for <p> taggen inne i boks_toppbanner */
+.boks_topBanner p {
+  text-align: center;
+  padding-top: 4vh;
+  font-family: "Paddington" sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  /* LÆRING - finn ut hvordan man justerer padding top utifra om det blir
+flere tekstlinjer når vindu minimeres per nå blir det usymetrisk */
+  color: rgba(7, 7, 7, 0.8);
+  text-shadow: -1px -1px 2px rgba(202, 202, 202, 0.9);
+}
+/* De tre neste definerer plassering av boks/knapper inne i meny-boksen */
+#boks_1 {
+  left: 5%;
+}
+#boks_2 {
+  left: 36.66666666666667%;
+}
+#boks_3 {
+  right: 5%;
+}
+/* setter display for "topbanner til block visning når musen går over området som okuperes av "dropdown" slik at den blir synlig */
+/* LÆRING! var <div id = "dropdown" nødvendig eller kunne dette vært gjort uten? */
+#dropdown:hover #topBanner {
+  display: block;
+}
+/* Fjerner knappen slik at elementene ikke overlapper */
+#dropdown:hover #knapp {
+  display: none;
+}
+
+/* Neste gang - lag fotokarusell inne i en "glassmorphism" boks på hovedside, begynne med de andre sidene */

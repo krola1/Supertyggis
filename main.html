@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sypertyggis!</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+   
+    <div id="bakteppe"> <!-- bakgrunn -->
+
+      <!-- Under begynner meny på toppen, inkl dropdown effekt -->
+      <div id="dropdown">    <!-- usikker på om jeg kunne gjort det uten div'en over - men det funker, får teste i neste prosjekt -->
+        <div id="knapp"></div><!-- lille markøren for dropdownmeny, heter "knapp" siden jeg først lagde den som en "button", vile se om det fortsatt funket som div. det gjorde det og ble værende  -->
+        <div id="topBanner"><!-- selve menyen og boksen rund. Var statisk i starten. derav navnet "topBanner" -->
+          
+          <a href="about-us.html" class="boks_topBanner" id="boks_1"> <!-- boksene/linkene i menyen. hele boksen er definert som link slik at hele er "klikkbar"  -->
+            <p>our vision</p> <!--  tekst inne i knappen  -->
+          </a>
+          <!--De to påfølgene linkene er kloner av elementet over   -->
+          <a href="faq.html" class="boks_topBanner" id="boks_2">
+            <p>FAQ</p>
+          </a>
+
+          <a href="shop.html" class="boks_topBanner" id="boks_3">
+            <p>Shop now</p>
+          </a>
+        </div> <!-- her slutter menyen med påfølgene underelemeneter -->
+    </div><!-- her slutter alt som har med dropdown  -->
+  </body>
+</html>
